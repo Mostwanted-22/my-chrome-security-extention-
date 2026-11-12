@@ -1,1 +1,18 @@
 
+{
+  "manifest_version": 3,
+  "name": "My Chrome Security Extension",
+  "version": "1.0",
+  "description": "My first chrome extension for cybersecurity learning - blocks malicious sites",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Security Guard"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
